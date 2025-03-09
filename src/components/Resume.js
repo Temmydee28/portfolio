@@ -56,8 +56,10 @@ const experience = [
 
 export default function Resume() {
   return (
+  <div className="items-center bg-gray-900 text-white text-center ptt-40">
+    <h2 className="text-3xl static text-red-500 font-bold mb-10">Work Experience</h2>
     <section id="resume" className="min-h-screen flex flex-col items-center bg-gray-900 text-white overflow-auto">
-
+ 
       {/* Vertical Line in the Middle */}
       <motion.div
         initial={{ scaleY: 0 }}
@@ -115,7 +117,9 @@ export default function Resume() {
           );
         })}
       </div>
+      
     </section>
+    </div>
   );
 }
 

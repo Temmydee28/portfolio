@@ -7,8 +7,8 @@ export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <nav className="container bg-gray-900 text-white shadow-lg fixed z-5">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-16">
+    <nav className="w-full bg-gray-900 text-white shadow-lg fixed top-0 left-0 right-0 z-50">
+      <div className="max-w-10xl mx-auto px-6 md:px-12 flex justify-between items-center h-16">
         
         {/* Logo */}
         <Link href="#home" className="text-2xl font-bold ">
@@ -16,7 +16,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6">
+        <ul className="hidden md:flex space-x-8">
           <li>
             <Link href="#home" className="hover:text-green-400 transition">Home</Link>
           </li>
@@ -46,7 +46,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {navOpen && (
-        <ul className="md:hidden flex flex-col items-center space-y-4 py-4 bg-gray-800 text-lg">
+        <ul className="md:hidden flex flex-col items-center space-y-4 py-4 bg-gray-800 text-lg absolute top-16 left-0 w-full">
           <li>
             <Link href="#" className="hover:text-green-400" onClick={() => setNavOpen(false)}>Home</Link>
           </li>

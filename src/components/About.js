@@ -7,14 +7,16 @@ export default function About(){
  const [position, setPosition] = useState({x:0,y:0});
 
  useEffect(()=> {
-   const moveImage = () => {
-     const randomX = Math.random() * (window.innerWidth - 300);
-     const randomY = Math.random() * (window.innerHeight - 800);
-    //  console.log(randomY)
-    //  console.log(randomX)
-    //  console.log(window.innerHeight)
-     setPosition({x:randomX, y: randomY});
-   };
+  const moveImage = () => {
+    const imageWidth = 200;  // Adjust this based on actual image size
+    const imageHeight = 200; // Adjust this based on actual image size
+  
+    const randomX = Math.max(0, Math.random() * (window.innerWidth - imageWidth));
+    const randomY = Math.max(0, Math.random() * (window.innerHeight - imageHeight));
+  
+    setPosition({ x: randomX, y: randomY });
+  };
+  
 
    const timeOut = setTimeout(()=>{
      moveImage();
@@ -25,9 +27,9 @@ export default function About(){
    return ()=> clearTimeout(timeOut)
    },[]);
      return(
-       <div id="about" className="flex items-center justify-center min-h-[70vh] bg-gray-900">
-       <motion.img
-       className="w-50 h-50 rounded-lg shadow-lg object-cover"
+      <div id="about" className="relative flex items-center justify-center min-h-[70vh] bg-gray-900 overflow-hidden">
+  <motion.img
+       className="w-[200px] h-[200px] rounded-lg shadow-lg object-cover"
        src="/profile.jpg"
        alt="Portfolio"
          initial={{ opacity: 1, y:50 }}
@@ -54,7 +56,7 @@ export default function About(){
      
 
 <h5 style={{color:'red', fontFamily:'roboto', fontSize:'25px'}}>ABOUT ME</h5>
-<p style={{fontFamily:'p', fontSize:'15px'}}>I&apos;m Temidayo Animasaun, a Seasoned FullStack Software Developer, with 5 years hands-on experience in building, maintaining debugging and managing innovative web application that solves problems and drive business growth. </p>
+<p className="break-words" style={{fontFamily:'p', fontSize:'15px'}}>I&apos;m Temidayo Animasaun, a Seasoned FullStack Software Developer, <br/>with 5 years hands-on experience in building, maintaining,debugging and managing innovative web application <br />that solves problems and drive business growth. </p>
       </motion.div>
         
      

@@ -81,7 +81,7 @@ export default function TechStack() {
   }, []);
 
   return (
-    <section id="tech-section" className="min-h-[80vh] flex flex-col items-center justify-center bg-gray-900 text-white p-10 pt-3">
+    <section id="tech-section" className="min-h-[80vh] flex flex-col items-center justify-center bg-gray-900 text-white p-10 pt-5 pb-5">
       <h2 className="text-4xl static text-red-500 font-bold mb-10">Tech Stack</h2>
 <section id="techie">
       <div className="relative w-full flex flex-col items-center space-y-8">
