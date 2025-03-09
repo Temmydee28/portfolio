@@ -131,13 +131,13 @@ export default function TechStack() {
                 className="flex items-center space-x-4 p-5 rounded-md w-full"
               >
                 <span className="text-lg font-semibold">{tech.name}</span>
-                <motion.div
+                {/* <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${tech.level}%` }}
                   transition={{ duration: 1, delay: 2.5 + index * 0.2 }}
                   className="h-2 bg-green-400 rounded-full"
                   style={{ maxWidth: "100px", justifyContent:"right", float:'right', textAlign:'right' }}
-                ></motion.div>
+                ></motion.div> */}
               </motion.div>
             )}
               {/* <span className="text-lg font-semibold">{tech.name}</span> */}
