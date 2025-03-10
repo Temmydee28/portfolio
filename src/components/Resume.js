@@ -7,6 +7,7 @@ const experience = [
             'Manange an existing code base',
             'Debugged old code and made the site Up and Running',
             'Added New Features'],
+        link:"https://belocated.ng"
     },
     {
         role: "Internship & Graduate", company: "Achievers University",sYear:'2024',eYear:'2025', details: [
@@ -15,12 +16,14 @@ const experience = [
             'Automatic calculation of attendance.(75%)',
             'Teachers create attendance records for lectures',
             'Students log in, input unique codes, and submit attendance'],
+        link:"", 
     },
     { role: "Software Developer", company: "TBTicketWave", sYear: "2024",eYear:"2024", position:90,positionY:-90,details: [
           "Developed a web-based Voting and Ticketing System for school events, featuring: ",
           "Online voting platform allowing users to vote for participants in various categories ",
           "Secure payment processing and real-time voting data storage in the database",
-    ],},
+    ], link: "https://www.tbticketwave.com.ng", 
+    },
     //   { role: "Web Developer", company: "DevHouse",  sYear: "2022",eYear:"2023",details: [
     //       "Created custom WordPress themes",
     //       "Improved SEO performance",
@@ -35,22 +38,26 @@ const experience = [
         "Developed a comprehensive Result Portal to streamline student result management.",
         "Admin registration of new students and staff",
         "Smooth viewing of result by students and Parents",
-      ],},
+      ], link:"https://freemanstandardschoolikare.sch.ng", 
+       },
       { role: "Software Developer", company: "  Cybertoolsonline(CTO), Abuja, NIGERIA", sYear: "2021",eYear:"2022", details: [
         "Developed an Application that allows service ordering",
         "Integrated Coinbase for Crypto payment on services rendered",
-      ],},
+      ], link:"https://cybertoolsonline.com"
+      },
       { role: "Software Developer", company: "NEWSFREAK, LAGOS, NIGERIA", sYear: "2022",eYear:"2022", details: [
         "Built a Newsblog",
         "Created a easy Admin dashboard for easy updating of the sites by authors",
         "Integrated REST APIs for real-time data and news update from twitter",
         "",
-      ],},
+      ],
+      link:"#"},
       { role: "InternShip", company: "WetindeyCode Academy", sYear: "2021",eYear:"2022", details: [
         "Learnt more on Developing web based applications",
         "Integrated Mailing and sms OTP",
         "Worked with other css framework",
-      ],},
+      ],
+      link:"https://wetindey.space"},
 ];
 
 
@@ -74,8 +81,15 @@ export default function Resume() {
           const isLeft = index % 2 === 0;
           const textLeft = index % 2 === 0; // Alternate left & right
           return (
+<a
+                                key={job.company}
+                                href={job.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full flex justify-center"
+                            >
+              
             <motion.div
-              key={job.company}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
@@ -114,6 +128,7 @@ export default function Resume() {
               {/* Timeline Year at the Bottom */}
               <p className="absolute bottom-[-20px] text-xs text-gray-400">{job.sYear}</p>
             </motion.div>
+                  </a>
           );
         })}
       </div>
