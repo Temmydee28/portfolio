@@ -56,7 +56,7 @@ export default function About(){
      
 
 <h5 style={{color:'red', fontFamily:'roboto', fontSize:'25px'}}>ABOUT ME</h5>
-<p className="break-words" style={{fontFamily:'p', fontSize:'15px'}}>I&apos;m Temidayo Animasaun, a Seasoned FullStack Software Developer, <br/>with 5 years hands-on experience in building, maintaining,debugging and managing innovative web application <br />that solves problems and drive business growth. </p>
+<p className="break-words" style={{fontFamily:'p', fontSize:'15px', color:'white'}}>I&apos;m Temidayo Animasaun, a Seasoned FullStack Software Developer, <br/>with 5 years hands-on experience in building, maintaining,debugging and managing innovative web application <br />that solves problems and drive business growth. </p>
       </motion.div>
         
      
